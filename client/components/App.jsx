@@ -4,6 +4,12 @@ import Search from "./Search.jsx"
 import Gallery from "./Gallery.jsx"
 
 class App extends React.Component {
+  state = {
+    query: "",
+    images: [],
+    randomImage: {}
+  }
+  
   render() {
     return (
       <>
