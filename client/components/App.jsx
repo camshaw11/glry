@@ -1,40 +1,9 @@
 import React from 'react'
 
-import Search from "./Search.jsx"
-import Gallery from "./Gallery.jsx"
-
-import { getImages, getRandomImage } from "../apis/splashbase.js"
-
-class App extends React.Component {
-  state = {
-    query: "",
-    images: [],
-    randomImage: {}
-  }
-  handleSubmit = (query) => {
-    console.log("submit query:", query)
-    getImages(query)
-      .then(images => {
-        console.log(images)
-        this.setState({
-          images: images
-        })
-      })
-  } 
-  render() {
-    return (
-      <>
-        <header>
-          <h1>GLRY</h1>
-          <h1>Heart</h1>
-        </header>
-        <main>
-          <Search handleSubmit={this.handleSubmit} />
-        </main>
-        <Gallery images={this.state.images} query={this.state.query} />
-      </>
-    )
-  }
+const App = () => {
+  return (
+    <h1>React development has begun!</h1>
+  )
 }
 
 export default App
