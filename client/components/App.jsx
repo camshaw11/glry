@@ -30,9 +30,6 @@ class App extends React.Component {
         <main>
           <Search handleSubmit={this.handleSubmit} />
         </main>
-        <button onClick={() => getImages("laptop")}>test search api</button>
-        <button onClick={() => getRandomImage()}>test random image</button>
-        {/* Empty Component */}
         <Gallery images={this.state.images} query={this.state.query} />
       </>
     )
