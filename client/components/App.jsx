@@ -14,6 +14,7 @@ class App extends React.Component {
   handleSubmit = (query) => {
     getImages(query)
       .then(images => {
+        console.log(images)
         this.setState({
           images: images
         })
@@ -22,8 +23,6 @@ class App extends React.Component {
   render() {
     return (
       <>
-        {/* HTML template */}
-        <h1>React development has begun!</h1>
         <header>
           <h1>GLRY</h1>
           <h1>Heart</h1>
