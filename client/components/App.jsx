@@ -8,7 +8,7 @@ import { getImages, getRandomImage } from "../apis/splashbase.js"
 class App extends React.Component {
   state = {
     query: "laptop",
-    images: [],
+    images: {images: []},
     randomImage: {}
   }
   handleSubmit = (query) => {
