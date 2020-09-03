@@ -15,9 +15,6 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <button onClick={() => getImages("laptop")}>test search api</button>
-        <button onClick={() => getRandomImage()}>test random image</button>
-
         {/* Empty Component */}
         <Search />
         <Gallery />
