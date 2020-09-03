@@ -5,12 +5,14 @@ const apiURL = 'http://www.splashbase.co/api/v1/images/'
 // http://www.splashbase.co/api/v1/images/search/?query=laptop
 
 const noResult = {
-  copyright: "",
-  id: 0,
-  large_url: "https://miro.medium.com/max/1600/1*zRvYJWeLF5dcxM1G2hcEHA.jpeg",
-  site: "",
-  source_id: null,
-  url: "https://miro.medium.com/max/1600/1*zRvYJWeLF5dcxM1G2hcEHA.jpeg"
+  images: [{
+    copyright: "",
+    id: 0,
+    large_url: "https://miro.medium.com/max/1600/1*zRvYJWeLF5dcxM1G2hcEHA.jpeg",
+    site: "",
+    source_id: 0,
+    url: "https://miro.medium.com/max/1600/1*zRvYJWeLF5dcxM1G2hcEHA.jpeg"
+  }],
 }
 
 export function getImages(query) {
