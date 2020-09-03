@@ -24,6 +24,7 @@ class Suggestions extends React.Component {
     return (
       <>  
       <div>
+        <p id="how-about">How about ...</p>
         {randomSuggestions.map((suggestion, index) => {
           return <button key={index} onClick={() => this.props.handleSubmit(suggestion)} >{suggestion}</button>
         })}
