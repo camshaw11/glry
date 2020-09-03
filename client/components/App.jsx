@@ -14,7 +14,7 @@ class App extends React.Component {
     return (
       <>
         {/* HTML template */}
-        <h1>React development has begun!</h1>
+        {/* <h1>React development has begun!</h1>
         <header>
           <h1>GLRY</h1>
           <h1>Heart</h1>
@@ -23,11 +23,13 @@ class App extends React.Component {
           <div className="search-box">
             <input type="text" name="search" id="search" placeholder="search..." />
           </div>
-        </main>
+        </main> */}
 
         {/* Empty Component */}
         <Search />
-        <Gallery />
+        <div className="gallery-container">
+          <Gallery />
+        </div>
       </>
     )
   }
