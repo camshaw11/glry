@@ -12,6 +12,7 @@ class App extends React.Component {
     randomImage: {}
   }
   handleSubmit = (query) => {
+    console.log("submit query:", query)
     getImages(query)
       .then(images => {
         console.log(images)
