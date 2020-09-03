@@ -11,15 +11,36 @@ const imagesLoadedOptions = { background: '.my-bg-image-el' }
 
 
 class Gallery extends React.Component {
+  // constructor(props) {
+  //   this.state({
+  //     images: []
+  //   })
+  //   // console.log(props)
+  // }
+
+  // componentDidMount() {
+  //   this.loadData();  
+  // }
+
+  // loadData() {
+  //   this.setState({
+  //     images: this.props.images
+  //   })
+  //   console.log(images)
+  // }
+
   render() {
-    // const childElements = this.props.elements.map(function(element){
-    //   return (
-    //     <li className="image-element-class">
-    //         <img src={element.src} />
-    //         <Image />
-    //     </li>
-    //   );
-    // })
+    // const childElements = this.props.images.images
+    console.log(this.props.images.images)
+    
+    const imageSearch = this.props.images.images.map((element, i) => {
+      return (
+        <li className="image-element-class">
+            <img src={element.url} />
+            <Image />
+        </li>
+      );
+    })
     return (
       <>
         <h1>Search results for...</h1>
@@ -31,7 +52,7 @@ class Gallery extends React.Component {
           updateOnEachImageLoad={false}
           imagesLoadedOptions={imagesLoadedOptions}
         >
-          {/* {childElements} */}
+          {imageSearch}
         </Masonry>
       </>
     )
