@@ -11,13 +11,26 @@ class App extends React.Component {
     images: [],
     randomImage: {}
   }
-
+  handleSubmit = (query) => {
+    getImages(query)
+      .then(images => {
+        console.log(images)
+        this.setState({
+          images: images
+        })
+      })
+  } 
   render() {
     return (
       <>
-        {/* Empty Component */}
-        <Search />
-        <Gallery />
+        <header>
+          <h1>GLRY</h1>
+          <h1>Heart</h1>
+        </header>
+        <main>
+          <Search handleSubmit={this.handleSubmit} />
+        </main>
+        <Gallery images={this.state.images} query={this.state.query} />
       </>
     )
   }
