@@ -3,13 +3,22 @@ import React from 'react'
 import Search from "./Search.jsx"
 import Gallery from "./Gallery.jsx"
 
+import { getImages, getRandomImage } from '../apis/splashbase'
+
 class App extends React.Component {
   state = {
     query: "",
     images: [],
     randomImage: {}
   }
-  
+  handleSubmit = (query) => {
+    getImages(query)
+      .then(images => {
+        this.setState({
+          images: images
+        })
+      })
+  } 
   render() {
     return (
       <>
@@ -20,14 +29,11 @@ class App extends React.Component {
           <h1>Heart</h1>
         </header>
         <main>
-          <div className="search-box">
-            <input type="text" name="search" id="search" placeholder="search..." />
-          </div>
+          <Search handleSubmit={this.handleSubmit} />
         </main>
 
         {/* Empty Component */}
-        <Search />
-        <Gallery />
+        <Gallery images={this.state.images} query={this.state.query} />
       </>
     )
   }
