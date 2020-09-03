@@ -3,7 +3,7 @@ import React from 'react'
 import Search from "./Search.jsx"
 import Gallery from "./Gallery.jsx"
 
-import { getImages, getRandomImage } from '../apis/splashbase'
+import { getImages, getRandomImage } from "../apis/splashbase.js"
 
 class App extends React.Component {
   state = {
@@ -31,7 +31,8 @@ class App extends React.Component {
         <main>
           <Search handleSubmit={this.handleSubmit} />
         </main>
-
+        <button onClick={() => getImages("laptop")}>test search api</button>
+        <button onClick={() => getRandomImage()}>test random image</button>
         {/* Empty Component */}
         <Gallery images={this.state.images} query={this.state.query} />
       </>
