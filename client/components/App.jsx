@@ -3,27 +3,20 @@ import React from 'react'
 import Search from "./Search.jsx"
 import Gallery from "./Gallery.jsx"
 
+import { getImages, getRandomImage } from "../apis/splashbase.js"
+
 class App extends React.Component {
   state = {
     query: "",
     images: [],
     randomImage: {}
   }
-  
+
   render() {
     return (
       <>
-        {/* HTML template */}
-        <h1>React development has begun!</h1>
-        <header>
-          <h1>GLRY</h1>
-          <h1>Heart</h1>
-        </header>
-        <main>
-          <div className="search-box">
-            <input type="text" name="search" id="search" placeholder="search..." />
-          </div>
-        </main>
+        <button onClick={() => getImages("laptop")}>test search api</button>
+        <button onClick={() => getRandomImage()}>test random image</button>
 
         {/* Empty Component */}
         <Search />
