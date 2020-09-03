@@ -18,7 +18,10 @@ export function getRandomImage() {
   return request
     .get(apiURL + randomNumber)
     .then(response => {
-      console.log(randomNumber, response.body)
+      console.log(response.body)
       return response.body
+    })
+    .catch(err => {
+      getRandomImage()
     })
 }
