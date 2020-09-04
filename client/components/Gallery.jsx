@@ -12,6 +12,16 @@ const imagesLoadedOptions = { background: '.my-bg-image-el' }
 
 class Gallery extends React.Component {
 
+  componentDidMount() {
+      this.props.handleSubmit(this.props.match.params.term)
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if(prevProps.match.params.term != this.props.match.params.term) {
+      this.props.handleSubmit(this.props.match.params.term)
+    }
+  }
+
   render() {
     const imageSearch = this.props.images.images.map((element, i) => {
       return (

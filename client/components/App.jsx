@@ -1,5 +1,7 @@
 import React from 'react'
 
+import {HashRouter as Router, Route, Link } from 'react-router-dom'
+
 import Search from "./Search.jsx"
 import Gallery from "./Gallery.jsx"
 
@@ -24,7 +26,7 @@ class App extends React.Component {
   }
   render() {
     return (
-      <>
+      <Router>
         <header>
           <h1>GLRY</h1>
           <h1>Heart</h1>
@@ -33,11 +35,18 @@ class App extends React.Component {
 
 
         <main>
-            <Search handleSubmit={this.handleSubmit} />
-            <Gallery images={this.state.images} query={this.state.query} />
-        </main>
 
-      </>
+        <div className="search-box">
+            <Route exact path='/' component={(props) => <Search {...props} handleSubmit={this.handleSubmit} />} />
+        </div>
+
+        <Route path='/search/:term' render={(props) => 
+          <Gallery {...props} 
+                  images={this.state.images} query={this.state.query} handleSubmit={this.handleSubmit} />
+                  } />
+        
+        </main>
+      </Router>
     )
   }
 }

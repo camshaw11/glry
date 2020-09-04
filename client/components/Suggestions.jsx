@@ -1,6 +1,6 @@
 import React from 'react'
 
-let suggestionsList = ["Food", "Laptop", "Dogs", "Cats", "Hipster", "Work", "Play", "Memes", "Animals"]
+let suggestionsList = ["Food", "Laptop", "Land", "Dogs", "Hipster", "Play", "Memes", "Animals", "Mountain"]
 
 class Suggestions extends React.Component {
 
@@ -19,6 +19,12 @@ class Suggestions extends React.Component {
     return suggestionsArr
   }
 
+  handleClick = (query, event) => {
+    event.preventDefault()
+    this.props.handleSubmit(query)
+    this.props.history.push(`/search/${query}`)
+  }
+  
   render() {
     const randomSuggestions = this.getRandomSuggestions()
     return (
@@ -27,7 +33,7 @@ class Suggestions extends React.Component {
           <div className="Suggestions-options">
             <p id="how-about">How about ...</p>
             {randomSuggestions.map((suggestion, index) => {
-              return <button className="button is-danger" key={index} onClick={() => this.props.handleSubmit(suggestion)} >{suggestion}</button>
+              return <button className="button is-danger" key={index} onClick={(event) => this.handleClick(suggestion, event)} >{suggestion}</button>
             })}
           </div>
         </div>
