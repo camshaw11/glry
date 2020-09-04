@@ -45,10 +45,8 @@ class App extends React.Component {
           <Search {...props} handleSubmit={this.handleSubmit} />
           <Gallery {...props} 
                   images={this.state.images} query={this.state.query} handleSubmit={this.handleSubmit} />
-          
           </>
                   } />
-        
         </main>
       </Router>
     )
