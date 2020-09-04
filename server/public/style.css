@@ -26,6 +26,24 @@ header {
     padding: 1em;
 }
 
+.App-title-logo {
+    margin: 5px;
+    width: 50px;
+    text-align: center;
+}
+
+.App-title-logo>a>img {
+    width: 33px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    opacity: .75;
+}
+
+.App-title-logo>a>img:hover{
+    opacity: 1;
+}
+
 h1 {
     margin: 0;
 }
@@ -82,18 +100,19 @@ main {
     width: 600px;
 }
 
-.my-gallery-class{
+.my-gallery-class {
     width: 100%;
     height: auto;
     padding: 2em;
 }
 
 /* Image */
-.image-element-class{
+
+.image-element-class {
     width: 30%;
 }
 
-.Gallery-container{
+.Gallery-container {
     width: 100%;
 }
 
