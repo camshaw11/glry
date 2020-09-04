@@ -22,7 +22,7 @@ class Search extends React.Component {
       <>
         <div className="search-box">
           <form onSubmit={this.handleSubmit}>
-            <input type="text" name="search" id="search" onChange={this.handleChange} placeholder="search..." />
+            <input className="input is-danger" type="text" name="search" id="search" onChange={this.handleChange} placeholder="search..." />
           </form>
         <Suggestions handleSubmit={this.props.handleSubmit} />
         </div>
