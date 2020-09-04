@@ -36,7 +36,9 @@ class App extends React.Component {
             <Route exact path='/' component={(props) => <Search {...props} handleSubmit={this.handleSubmit} />} />
         </div>
 
-        <Route path='/search' component={(props) => <Gallery {...props} images={this.state.images} query={this.state.query} handleSubmit={this.handleSubmit} />} />
+        <Route path='/search/:term' render={(props) => 
+          <Gallery {...props} 
+                  images={this.state.images} query={this.state.query} handleSubmit={this.handleSubmit} />} />
         
         </main>
       </Router>

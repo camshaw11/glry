@@ -13,9 +13,7 @@ const imagesLoadedOptions = { background: '.my-bg-image-el' }
 class Gallery extends React.Component {
 
   componentDidMount() {
-    if(prevProps.match.params.term != this.props.match.params.term) {
       this.props.handleSubmit(this.props.match.params.term)
-    }
   }
 
   componentDidUpdate(prevProps, prevState) {

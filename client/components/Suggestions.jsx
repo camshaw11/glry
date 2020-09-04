@@ -1,6 +1,6 @@
 import React from 'react'
 
-let suggestionsList = ["Food", "Laptop", "Dogs", "Cats", "Hipster", "Work", "Play", "Memes", "Animals"]
+let suggestionsList = ["Food", "Laptop", "Land", "Dogs", "Hipster", "Play", "Memes", "Animals", "Mountain"]
 
 class Suggestions extends React.Component {
   
@@ -22,7 +22,7 @@ class Suggestions extends React.Component {
   handleClick = (query, event) => {
     event.preventDefault()
     this.props.handleSubmit(query)
-    this.props.history.push(`/search?query=${query}`)
+    this.props.history.push(`/search/${query}`)
   }
   
   render() {
