@@ -26,34 +26,30 @@ header {
     padding: 1em;
 }
 
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-}
-
 h1 {
     margin: 0;
 }
 
 /* App */
 
-.App-container {}
+main {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
 
 .App-content {
-    display: flex;
     flex-flow: column;
     border: 1px solid green;
 }
 
 .App-content-search {
-    display: flex;
     border: 1px solid red;
 }
 
 .App-content-gallery {
-    display: flex;
     border: 1px solid blue;
 }
 
@@ -81,10 +77,25 @@ h1 {
 
 .Gallery-container {
     display: flex;
-    flex-flow: wrap;
+    flex-flow: column;
     border: 1px solid black;
+    width: 600px;
 }
 
-.image-element-class {
-    width: 300px;
+.my-gallery-class{
+    width: 33%;
+    height: auto;
+}
+
+/* Image */
+.image-element-class{
+    width: 30%;
+}
+
+.Gallery-container{
+    width: 100%;
+}
+
+img {
+    margin: 1em;
 }

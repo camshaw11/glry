@@ -21,7 +21,7 @@ class Gallery extends React.Component {
       )
     })
     return (
-      <div className="Gallery-container">
+      <>
         <h1>Search results for {this.props.query}</h1>
         <Masonry
           className={'my-gallery-class'}
@@ -33,7 +33,7 @@ class Gallery extends React.Component {
         >
           {imageSearch}
         </Masonry>
-      </div>
+      </>
     )
   }
 }
