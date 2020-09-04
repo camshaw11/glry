@@ -42,17 +42,12 @@ class App extends React.Component {
           </div>
 
           <Route path='/search/:term' render={(props) =>
-            <Gallery {...props}
-              images={this.state.images} query={this.state.query} handleSubmit={this.handleSubmit} />
+            <>
+              <Search {...props} handleSubmit={this.handleSubmit} />
+              <Gallery {...props}
+                images={this.state.images} query={this.state.query} handleSubmit={this.handleSubmit} />
+            </>
           } />
-
-        <Route path='/search/:term' render={(props) => 
-          <>
-          <Search {...props} handleSubmit={this.handleSubmit} />
-          <Gallery {...props} 
-                  images={this.state.images} query={this.state.query} handleSubmit={this.handleSubmit} />
-          </>
-                  } />
         </main>
       </Router>
     )
