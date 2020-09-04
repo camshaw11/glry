@@ -18,6 +18,12 @@ class Suggestions extends React.Component {
     suggestionsListTemp = suggestionsList
     return suggestionsArr
   }
+
+  handleClick = (query, event) => {
+    event.preventDefault()
+    this.props.handleSubmit(query)
+    this.props.history.push(`/search?query=${query}`)
+  }
   
   render() {
     const randomSuggestions = this.getRandomSuggestions() 
@@ -26,7 +32,7 @@ class Suggestions extends React.Component {
       <div>
         <p id="how-about">How about ...</p>
         {randomSuggestions.map((suggestion, index) => {
-          return <button key={index} onClick={() => this.props.handleSubmit(suggestion)} >{suggestion}</button>
+          return <button key={index} onClick={(event) => this.handleClick(suggestion, event)} >{suggestion}</button>
         })}
 
       </div>
