@@ -86,18 +86,26 @@ main {
     width: 100%;
     height: auto;
     padding: 2em;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
 }
 
 /* Image */
 .image-element-class{
-    width: 30%;
+    width: 29%;
+    margin: 1em;
 }
 
 .Gallery-container{
     width: 100%;
 }
 
-img {
+/* img {
     margin: 1em;
     padding: 1em;
-}
+} */
+
+/* * {
+    border: 1px solid red;
+} */
