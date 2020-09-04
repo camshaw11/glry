@@ -19,25 +19,25 @@ class Gallery extends React.Component {
     const imageSearch = this.props.images.images.map((element, i) => {
       return (
         <li key={i} className="image-element-class">
-            <img src={element.url} />
-            {/* <Image /> */}
+          <img src={element.url} />
+          <Image />
         </li>
-      );
+      )
     })
     return (
-      <>
+      <div className="Gallery-container">
         <h1>Search results for...</h1>
         <Masonry
           className={'my-gallery-class'}
-          elementType={'ul'} 
-          options={masonryOptions} 
-          disableImagesLoaded={false} 
+          elementType={'ul'}
+          options={masonryOptions}
+          disableImagesLoaded={false}
           updateOnEachImageLoad={false}
           imagesLoadedOptions={imagesLoadedOptions}
         >
           {imageSearch}
         </Masonry>
-      </>
+      </div>
     )
   }
 }

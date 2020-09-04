@@ -28,10 +28,17 @@ class App extends React.Component {
           <h1>GLRY</h1>
           <h1>Heart</h1>
         </header>
-        <main>
-          <Search handleSubmit={this.handleSubmit} />
-          <Gallery images={this.state.images} query={this.state.query} />
-        </main>
+
+        <div className="App-content">
+          <main>
+            <div className="App-content-search">
+              <Search handleSubmit={this.handleSubmit} />
+            </div>
+            <div className="App-content-gallery">
+              <Gallery images={this.state.images} query={this.state.query} />
+            </div>
+          </main>
+        </div>
       </div>
     )
   }
