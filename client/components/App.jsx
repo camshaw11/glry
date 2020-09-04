@@ -42,7 +42,8 @@ class App extends React.Component {
 
         <Route path='/search/:term' render={(props) => 
           <Gallery {...props} 
-                  images={this.state.images} query={this.state.query} handleSubmit={this.handleSubmit} />} />
+                  images={this.state.images} query={this.state.query} handleSubmit={this.handleSubmit} />
+                  } />
         
         </main>
       </Router>
