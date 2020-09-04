@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {HashRouter as Router, Route, Link } from 'react-router-dom'
+import { HashRouter as Router, Route, Link } from 'react-router-dom'
 
 import Search from "./Search.jsx"
 import Gallery from "./Gallery.jsx"
@@ -28,23 +28,26 @@ class App extends React.Component {
     return (
       <Router>
         <header>
-          <h1>GLRY</h1>
-          <h1>Heart</h1>
-
+          <div className="App-title-logo">
+            <h1>GLRY</h1>
+            <a href="#/"><img src="./logo.png"></img></a>
+          </div>
         </header>
 
 
         <main>
 
-        <div className="search-box">
+          <div className="search-box">
             <Route exact path='/' component={(props) => <Search {...props} handleSubmit={this.handleSubmit} />} />
-        </div>
+          </div>
 
-        <Route path='/search/:term' render={(props) => 
-          <Gallery {...props} 
-                  images={this.state.images} query={this.state.query} handleSubmit={this.handleSubmit} />
-                  } />
-        
+          <Route path='/search/:term' render={(props) =>
+            <>
+              <Search {...props} handleSubmit={this.handleSubmit} />
+              <Gallery {...props}
+                images={this.state.images} query={this.state.query} handleSubmit={this.handleSubmit} />
+            </>
+          } />
         </main>
       </Router>
     )
