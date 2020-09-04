@@ -1,6 +1,6 @@
 import React from 'react'
 
-let suggestionsList = ["Food", "Laptop", "Land", "Dogs", "Hipster", "Play", "Memes", "Animals", "Mountain"]
+let suggestionsList = ["Laptop", "Land", "Animals", "Mountain", "Man", "Woman", "People", "Buildings", "Car"]
 
 class Suggestions extends React.Component {
 
