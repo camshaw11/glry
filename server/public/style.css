@@ -83,8 +83,9 @@ main {
 }
 
 .my-gallery-class{
-    width: 33%;
+    width: 100%;
     height: auto;
+    padding: 2em;
 }
 
 /* Image */
@@ -98,4 +99,5 @@ main {
 
 img {
     margin: 1em;
+    padding: 1em;
 }
