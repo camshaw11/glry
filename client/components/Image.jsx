@@ -5,7 +5,7 @@ class Image extends React.Component {
   render() {
     return (
       <>
-        {/* Image Stuff */}
+        <img src={this.props.source} alt={this.props.altTag}/>
       </>
     )
   }
