@@ -1,28 +1,23 @@
-# A starter webpack project for React
+# GLRY
 
-This is a starter project that uses webpack to transpile and bundle ES6 React code. To use, consider these steps:
-
-* Fork this repo
-* Rename your repo according to the app you're building
-
-```sh
-git clone https://github.com/[your-account]/[your-app].git
-cd [your-app] && npm i
-```
-
-To start the development server with a watcher that rebuilds your code, run `npm run dev`. The assets built by webpack are placed in `server/public`. This folder is defined as a static folder in an Express.js server that can be started with `npm run server`.
-
-Additional components should be placed in `client/components`.
-
-## Separate client/server
-
-The boilerplate is also set up to host the client using `webpack-dev-server` with hot module reloading etc. To use this method, in one terminal run:
-```sh
-npm run client
-```
-and in the other:
-```sh
-npm run server
-```
-The client will be available on http://localhost:8080 and the server on http://localhost:3000. Note that you will still need to manage CORS between the two, as they are on different ports.
-
+  Glry is a website that allows you to search for an image based on a query.
+  
+  Users can click on one of the suggested queries to get started.
+  
+  
+  # View the live site 
+  
+  http://gllry.herokuapp.com/#/
+  
+  
+ ## To get started:
+ 
+  1) Clone the repo
+  
+  2) Run npm install
+  
+  # Authors
+  
+  [Cameron Shaw](https://github.com/camshaw11)
+  [Alex Procter](https://github.com/alexpppp)
+  [Philip Chan](https://github.com/phil-chan)
